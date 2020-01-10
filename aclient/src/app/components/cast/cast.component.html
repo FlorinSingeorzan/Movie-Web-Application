@@ -1,0 +1,20 @@
+<div style="margin-top: 50px" class="container">
+  <div class="span1">
+    <a routerLink="/regular" class="btn btn-primary">
+      <i class="glyphicon glyphicon-chevron-left icon-white"></i>
+      <span><strong>Back</strong></span>
+    </a>
+  </div>
+  <div *ngFor="let actor of cast" style="margin-top: 20px">
+    <div class="row" style="margin: 20px">
+    <img src="{{actor.photo}}">
+
+    <div style="margin-left: 240px;margin-right: 40px; position: absolute">
+      <h2  >{{actor. name}} </h2>
+      <h6 style="margin: 20px">Born : {{actor.born}}</h6>
+      <a style="margin: 20px" href="{{actor.page}}">Official Page</a>
+      <p style="margin: 20px" >{{  actor.description}}</p>
+    </div>
+    </div>
+  </div>
+</div>

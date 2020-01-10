@@ -1,0 +1,26 @@
+<div *ngIf="logUser!='NONE'">
+<div class="container">
+  <div class="" *ngFor="let movie of movies ">
+    <article class="list--item">
+      <figure   routerLink="detail/{{movie.id}}">
+        <img   src="{{movie.image}}}" alt="">
+        <header>
+          <div class="floater">
+            {{movie.rate}}
+            <img src="http://www.i2clipart.com/cliparts/7/1/f/3/clipart-yellow-star-71f3.png">
+          </div>
+          <h2>{{movie.title}}</h2>
+        </header>
+        <div style="height: 190px;">
+          <figcaption>
+          {{movie.storyline}}
+         </figcaption>
+        <figcaption>
+          {{movie.genres}}
+        </figcaption>
+        </div>
+      </figure>
+    </article>
+  </div>
+</div>
+</div>

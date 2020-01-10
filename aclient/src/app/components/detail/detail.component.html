@@ -1,0 +1,64 @@
+<div style="margin-top: 50px" class="container">
+  <div class="span1">
+    <a routerLink="/regular" class="btn btn-primary">
+      <i class="glyphicon glyphicon-chevron-left icon-white"></i>
+      <span><strong>Back</strong></span>
+    </a>
+  </div>
+  <div class="row"  style="margin-top: 20px">
+    <img src="{{sMovie.image}}">
+
+    <div style="margin-left: 205px;margin-right: 40px; position: absolute">
+      <h2  >{{sMovie.title}} </h2>
+      <div class="row">
+      <div class="starWrapper" *ngFor="let i of stars">
+          <img  style="width: 20px;height: 20px;" src="http://www.i2clipart.com/cliparts/7/1/f/3/clipart-yellow-star-71f3.png">
+      </div >
+        <div style="margin-left: 20px" *ngIf="feedback.watched == 0">
+            <button class="btn btn-primary" id="tog" (click)="addWatched()">Add to watchlist</button>
+        </div>
+        <div style="margin-left: 20px" *ngIf="feedback.watched == 1">
+          <button class="btn btn-primary" id="tog" (click)="addWatched()">Added</button>
+        </div>
+      </div>
+      <h6 style="margin: 20px">Release: {{sMovie.year}}</h6>
+      <h6 style="margin: 20px">Genres: {{sMovie.genres}}</h6>
+      <h6 style="margin: 20px">Runtime : {{sMovie.runtime}} min</h6>
+      <p>{{  sMovie.storyline}}</p>
+      <div class="span1 col-8">
+        <a routerLink="/cast/{{id}}" class="btn btn-primary">
+          <i class="glyphicon glyphicon-chevron-left icon-white"></i>
+          <span><strong>Cast</strong></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="yVideo">
+    <iframe width="560" height="315" [src]="sanitizer.bypassSecurityTrustResourceUrl(sMovie.trailer)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+ <div>
+   Add a review
+   <textarea rows="3" [(ngModel)]="feedback.review" style="width: 100%;margin:10px auto"  class="form-control" placeholder="Say your opinion..." ></textarea>
+   <div class="span1 col-8">
+     <a (click)="addReview()" class="btn btn-primary">
+       <i class="glyphicon glyphicon-chevron-left icon-white"></i>
+       <span><strong>Add</strong></span>
+     </a>
+   </div>
+   <div style="margin-top: 40px">
+      Other Users Reviews:
+     <div *ngFor="let feed of allFeedbacks" >
+       <div *ngIf="feed.review!=null" class="feeds">
+         <div class="input-group-prepend">
+           <span class="input-group-text" id="validationTooltipUsernamePrepend">></span>
+         </div>
+         <h6>{{feed.review}}</h6>
+
+       </div>
+
+     </div>
+   </div>
+ </div>
+
+</div>

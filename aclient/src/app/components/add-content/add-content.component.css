@@ -1,0 +1,16 @@
+.componentForm{
+
+  border-radius: 4px;
+  background: #fafafa;
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 50px;
+  align-self: center;
+}
+
+.headingStyle{
+  padding-left: 60px;
+  background-color: #dedede;
+  border-radius: 7px
+}

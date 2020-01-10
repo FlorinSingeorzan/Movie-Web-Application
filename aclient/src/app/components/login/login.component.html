@@ -1,0 +1,27 @@
+<div  class="container text-center lform">
+  <div style="text-align: center;margin:0 auto">
+    <h1 class="form-heading">Login</h1>
+    <div class="login-form">
+      <div class="main-div">
+        <div class="panel">
+          <p>Please enter your username and password</p>
+        </div>
+        <form style="padding: 15%" id="Login" method="post" (ngSubmit)="performLogin()" >
+          <div class="form-group text-center">
+            <input [(ngModel)]="user.name" type="text"   class="form-control" id="inputUsername" name="username" placeholder="Username">
+          </div>
+          <div class="form-group text-center">
+            <input [(ngModel)]="user.password" type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+          </div>
+          <div style="height: 60px;">
+          <button class="btn btn-primary">Login</button>
+          </div>
+            <div style="height: 60px;" class="login-register">
+            <a routerLink="/register">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

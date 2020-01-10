@@ -1,0 +1,19 @@
+.starWrapper{
+  display: inline-block;
+}
+
+.yVideo{
+  position: relative;
+  margin-left: 30%;
+  top: 50%;
+  /*transform: translate(-50%,-50%);*/
+}
+p{
+  word-break: break-word;
+}
+
+.feeds{
+  margin-top: 25px;
+  margin-left: 15px;
+  margin-bottom: 20px
+}

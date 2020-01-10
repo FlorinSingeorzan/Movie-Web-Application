@@ -1,0 +1,65 @@
+<div *ngIf="logUser=='ADMIN'">
+<h2 class="headingStyle">Add a new movie</h2>
+<div class="componentForm">
+  <div class="row text-center" style="height: 300px;">
+    <input type="number" [(ngModel)]="movie.id" style="width: auto;margin:0 auto"  class="form-control" placeholder="Id">
+    <input type="text" [(ngModel)]="movie.title" style="width: auto;margin:0 auto"  class="form-control" placeholder="Title">
+    <input type="number" [(ngModel)]="movie.year" style="width: auto;margin:0 auto"  class="form-control" placeholder="Year">
+    <input type="text" [(ngModel)]="movie.director" style="width: auto;margin:0 auto"  class="form-control" placeholder="Director">
+    <input type="text" [(ngModel)]="movie.genres" style="width: auto;margin:0 auto"  class="form-control"  placeholder="Genres">
+    <input type="text" [(ngModel)]="movie.runtime" style="width: auto;margin:0 auto"  class="form-control" placeholder="Runtime">
+    <input type="text" [(ngModel)]="movie.image" style="width: auto;margin:0 auto"  class="form-control"  placeholder="Image">
+    <input type="text" [(ngModel)]="movie.trailer" style="width: auto;margin:0 auto"  class="form-control" placeholder="Trailer">
+    <input type="text" [(ngModel)]="movie.languages" style="width: auto;margin:0 auto"  class="form-control"  placeholder="Language">
+    <input type="number" [(ngModel)]="movie.rate" style="width: auto;margin:0 auto"  class="form-control" placeholder="Rate">
+    <textarea  rows="3" [(ngModel)]="movie.storyline" style="width: 100%;margin:0 auto"  class="form-control" placeholder="Story Line"></textarea>
+
+  </div>
+  <div class="form-group text-center">
+    <button type="button" style="margin: 20px" class="btn btn-dark" (click)="addMovie()">Add Movie</button>
+  </div>
+  <div class="form-group text-center">
+    <span class="text-center">*User will be notified about this new movie.</span>
+  </div>
+
+
+</div>
+<h2 class="headingStyle">Add an actor </h2>
+<div class="componentForm" >
+  <div class="row text-center" style="height: 300px;">
+    <input type="number" [(ngModel)]="staff.id" style="width: auto;margin:0 auto"  class="form-control" placeholder="Id">
+    <input type="text" [(ngModel)]="staff.name" style="width: auto;margin:0 auto"  class="form-control" placeholder="Name">
+    <input type="text" [(ngModel)]="staff.born" style="width: auto;margin:0 auto"  class="form-control"  placeholder="Born Date">
+    <input type="text" [(ngModel)]="staff.page" style="width: auto;margin:0 auto"  class="form-control" placeholder="Page">
+    <input type="text" [(ngModel)]="staff.photo" style="width: auto;margin:0 auto"  class="form-control"  placeholder="Photo">
+    <textarea rows="2" [(ngModel)]="staff.description" style="width: 100%;margin:0 auto"  class="form-control" placeholder="Description"></textarea>
+  </div>
+  <div class="form-group text-center">
+    <button type="button" style="margin: 20px" class="btn btn-dark" (click)="addStaff()">Add Actor</button>
+
+  </div>
+</div>
+<h2 class="headingStyle">Add an role distribution </h2>
+<div class="componentForm" style="padding-left: 20%; padding-right: 20%">
+  <div class="row text-center" style="height: 100px;">
+    <input type="number" [(ngModel)]="role.id" style="width: auto;margin:0 auto"  class="form-control" placeholder="Id">
+    <input type="number" [(ngModel)]="role.idMovie" style="width: auto;margin:0 auto"  class="form-control" placeholder="Id Movie">
+    <input type="number" [(ngModel)]="role.idStaff" style="width: auto;margin:0 auto"  class="form-control" placeholder="Id Staff">
+    <input type="text" [(ngModel)]="role.name" style="width: auto;margin:0 auto"  class="form-control" placeholder="Character Name">
+  </div>
+  <div class="form-group text-center">
+    <button type="button" style="margin: 20px" class="btn btn-dark" (click)="addRole()">Add Role Distribution</button>
+  </div>
+</div>
+
+
+<h2 class="headingStyle">Ban a user</h2>
+<div class="componentForm" style="padding-left: 20%; padding-right: 20%">
+  <div class="row text-center" style="height: 50px;">
+    <input type="number" [(ngModel)]="userId" style="width: auto;margin:0 auto"  class="form-control" placeholder="User Id">
+  </div>
+  <div class="form-group text-center" >
+    <button type="button" style="margin: 20px" class="btn btn-dark" (click)="deleteUser()">Ban</button>
+  </div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container text-center rform" >
+  <div style="text-align: center;margin:0 auto">
+    <h1 class="form-heading">Register</h1>
+    <div class="register-form">
+      <div class="main-div">
+        <div class="panel">
+          <p>Please enter your username and password</p>
+        </div>
+        <form style="padding: 15%" id="Register" method="post" (ngSubmit)="performRegister(user.name)">
+          <div class="form-group"  >
+            <input [(ngModel)]="user.name" type="text" style="margin:0 auto"  class="form-control" id="registerUsername" name="username" placeholder="Username">
+          </div>
+          <div class="input-group form-group"  style="margin: 0 auto 15px;" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            </div>
+            <input type="text" class="form-control" [(ngModel)]="user.email" placeholder="Email" name="email" aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid username.
+            </div>
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="user.password" type="password" style="margin:0 auto" class="form-control" id="registerPassword" name="password" placeholder="Password">
+          </div>
+          <div class="form-group" >
+            <input [(ngModel)]="pass" type="password" style="margin:0 auto" class="form-control" id="registerRepeatPassword" name="repeatPassword" placeholder="Repeat Password">
+          </div>
+          <button   class="btn btn-primary">Register</button>
+          <div class="login-register">
+            <a routerLink="/login">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

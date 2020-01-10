@@ -1,0 +1,12 @@
+.lform{
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 5px;
+  width: 30%;
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fafafa;
+  height: 400px;
+}
