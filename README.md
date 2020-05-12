@@ -8,9 +8,9 @@ logic on entries and post a REST Api Service
 
 # Client Side
 
-The client was developed in Angular and consists in HTML and Javascript module witch  
-communicate with the server and allow diferent action like  
--view detailed informations about movies, show and actors  
+The client was developed in Angular and consists of HTML and Javascript modules witch  
+communicate with the server and allow different action like  
+-view detailed information about movies, show and actors  
 -rate  movies, show and actors  
 -create watchlist  
 -create tops  
